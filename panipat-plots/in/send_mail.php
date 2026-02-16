@@ -18,7 +18,16 @@ $project  = trim($_POST['mx_Project_Name'] ?? '');
 $location = trim($_POST['mx_City'] ?? '');
 $client   = trim($_POST['CLIENT'] ?? '');
 
-if (!$name || !$email || !$phone || !$countryCode) {
+if ($countryCode !== '') {
+    $countryCode = ltrim($countryCode, '+'); 
+    $fullPhone = $countryCode . '-' . $phone; 
+} else {
+    $fullPhone = $phone; 
+}
+
+/* ===== VALIDATION (DO NOT CHECK COUNTRY CODE) ===== */
+
+if (!$name || !$email || !$phone) {
     echo json_encode(['status' => 'error']);
     exit;
 }
