@@ -1,0 +1,1821 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="description" content="">
+   <meta name="keywords" content="">
+   <meta name="author" content="">
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"
+      integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"
+      integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+
+   <link rel="shortcut icon" href="img/favicon.png" type="img/favicon">
+   <!-- owl carousel  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+   <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+   <link rel="stylesheet" href="css/style.css">
+   <title>Godrej Evora Estate</title>
+
+   <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16674150825"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-16674150825');
+</script>
+
+   <style>
+      .form-popup-bg {
+         position: absolute;
+         top: 0;
+         left: 0;
+         right: 0;
+         bottom: 0;
+         display: flex;
+         flex-direction: column;
+         align-content: center;
+         justify-content: center;
+      }
+
+      .form-popup-bg {
+         position: fixed;
+         left: 0;
+         top: 0;
+         height: 100%;
+         width: 100%;
+         background-color: rgba(94, 110, 141, 0.9);
+         opacity: 0;
+         visibility: hidden;
+         -webkit-transition: opacity 0.3s 0s, visibility 0s 0.3s;
+         -moz-transition: opacity 0.3s 0s, visibility 0s 0.3s;
+         transition: opacity 0.3s 0s, visibility 0s 0.3s;
+         overflow-y: auto;
+         z-index: 10000;
+      }
+
+      .form-popup-bg.is-visible {
+         opacity: 1;
+         visibility: visible;
+         -webkit-transition: opacity 0.3s 0s, visibility 0s 0s;
+         -moz-transition: opacity 0.3s 0s, visibility 0s 0s;
+         transition: opacity 0.3s 0s, visibility 0s 0s;
+      }
+
+      .form-container {
+         background-color: #ffffff;
+         border-radius: 10px;
+         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+         display: flex;
+         flex-direction: column;
+         width: 100%;
+         max-width: 680px;
+         margin-left: auto;
+         margin-right: auto;
+         position: relative;
+         padding: 28px;
+         color: #000000;
+      }
+
+      .close-button {
+         color: #000000;
+         width: 40px;
+         height: 40px;
+         position: absolute;
+         top: 18px;
+         right: 12px;
+         border: solid 2px #000000;
+         place-content: center;
+         display: flex;
+         align-items: center;
+         z-index: 99;
+         background-color: transparent;
+      }
+
+      .form-popup-bg:before {
+         content: '';
+         background-color: #000000;
+         opacity: 0.25;
+         position: absolute;
+         top: 0;
+         left: 0;
+         right: 0;
+         bottom: 0;
+      }
+
+
+      .popup_form {
+         width: 100%;
+         padding: .375rem .75rem;
+         font-size: 1rem;
+         font-weight: 400;
+         line-height: 1.5;
+         background: none;
+         border: 1px solid #000000;
+         outline: none;
+         color: #000000 !important;
+
+      }
+
+      .form-popup-bg .form-control:focus {
+         background: none !important;
+      }
+
+      .form-popup-bg .form-control::placeholder {
+         color: #000000;
+      }
+
+
+      .b-user-message {
+         position: absolute;
+         left: -5000px;
+         text-indent: 100%;
+         white-space: nowrap;
+         overflow: hidden;
+      }
+
+      .popup-image img {
+         height: 300px;
+         object-fit: cover;
+         border: 1px solid #b77d3c;
+      }
+      .phone-group {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #fff;
+}
+.phone-group select {
+    border: none;
+    padding: 10px 12px;
+    background-color: #f9f9f9;
+    font-size: 14px;
+    width: 110px;
+    appearance: none;
+    -webkit-appearance: none;
+    border-right: 1px solid #ddd;
+}
+.phone-group input {
+    border: none;
+    padding: 10px;
+    font-size: 14px;
+    flex: 1;
+    outline: none;
+}
+.madal-reload .modal-dialog .phone-group {
+    width: 95%;
+}
+   </style>
+</head>
+
+<body>
+
+
+   <div class="modal fade form-popup-bg" id="enquireModal" tabindex="-1" aria-labelledby="enquireModalLabel"
+      aria-hidden="flase">
+      <div class="form-container">
+         <div class="modal-header border-0 p-0">
+            <button class="btnCloseForm close-button">X</button>
+         </div>
+
+         <div class="row align-items-center">
+            <div class="popup-image col-md-6">
+               <img src="img/gallery_1.webp" alt="image" width="100%">
+            </div>
+
+            <div class="col-md-6 col-sm-12">
+               <div class="form_text">
+
+                  <h3 class="modal-title mb-3 fs-4" id="enquireModalLabel">Godrej Evora Estate</h3>
+
+                  <form method="post" action="https://fdr-api.pixleo.com/lead" class="contact-form">
+
+                     <input autocomplete="off" id="FIRSTNAME" name="FIRSTNAME" class="form-control popup_form mb-4"
+                        data-error="Name cannot contain digit or special character" placeholder="Your Full Name"
+                        required="">
+
+                     <input autocomplete="off" id="EMAIL" name="EMAIL" class="form-control popup_form mb-4"
+                        data-error="Name cannot contain digit or special character" placeholder="Email Address"
+                        pattern="\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+" required="">
+
+                    <div class="phone-group mb-3">
+                        <select name="COUNTRYCODE" id="COUNTRYCODE" required>
+                           
+                           
+                           <option value="+971">🇦🇪 +971</option>
+                           <option value="+93">🇦🇫 +93</option>
+                           <option value="+355">🇦🇱 +355</option>
+                           <option value="+213">🇩🇿 +213</option>
+                           <option value="+376">🇦🇩 +376</option>
+                           <option value="+244">🇦🇴 +244</option>
+                           <option value="+1-268">🇦🇬 +1-268</option>
+                           <option value="+54">🇦🇷 +54</option>
+                           <option value="+374">🇦🇲 +374</option>
+                           <option value="+61">🇦🇺 +61</option>
+                           <option value="+43">🇦🇹 +43</option>
+                           <option value="+994">🇦🇿 +994</option>
+                           <option value="+973">🇧🇭 +973</option>
+                           <option value="+880">🇧🇩 +880</option>
+                           <option value="+375">🇧🇾 +375</option>
+                           <option value="+32">🇧🇪 +32</option>
+                           <option value="+501">🇧🇿 +501</option>
+                           <option value="+229">🇧🇯 +229</option>
+                           <option value="+975">🇧🇹 +975</option>
+                           <option value="+591">🇧🇴 +591</option>
+                           <option value="+387">🇧🇦 +387</option>
+                           <option value="+267">🇧🇼 +267</option>
+                           <option value="+55">🇧🇷 +55</option>
+                           <option value="+673">🇧🇳 +673</option>
+                           <option value="+359">🇧🇬 +359</option>
+                           <option value="+226">🇧🇫 +226</option>
+                           <option value="+95">🇲🇲 +95</option>
+                           <option value="+257">🇧🇮 +257</option>
+                           <option value="+855">🇰🇭 +855</option>
+                           <option value="+237">🇨🇲 +237</option>
+                           <option value="+1">🇨🇦 +1</option>
+                           <option value="+238">🇨🇻 +238</option>
+                           <option value="+236">🇨🇫 +236</option>
+                           <option value="+235">🇹🇩 +235</option>
+                           <option value="+56">🇨🇱 +56</option>
+                           <option value="+86">🇨🇳 +86</option>
+                           <option value="+57">🇨🇴 +57</option>
+                           <option value="+269">🇰🇲 +269</option>
+                           <option value="+506">🇨🇷 +506</option>
+                           <option value="+385">🇭🇷 +385</option>
+                           <option value="+53">🇨🇺 +53</option>
+                           <option value="+357">🇨🇾 +357</option>
+                           <option value="+420">🇨🇿 +420</option>
+                           <option value="+45">🇩🇰 +45</option>
+                           <option value="+253">🇩🇯 +253</option>
+                           <option value="+1-767">🇩🇲 +1-767</option>
+                           <option value="+1-809">🇩🇴 +1-809</option>
+                           <option value="+593">🇪🇨 +593</option>
+                           <option value="+20">🇪🇬 +20</option>
+                           <option value="+503">🇸🇻 +503</option>
+                           <option value="+240">🇬🇶 +240</option>
+                           <option value="+291">🇪🇷 +291</option>
+                           <option value="+372">🇪🇪 +372</option>
+                           <option value="+251">🇪🇹 +251</option>
+                           <option value="+679">🇫🇯 +679</option>
+                           <option value="+358">🇫🇮 +358</option>
+                           <option value="+33">🇫🇷 +33</option>
+                           <option value="+995">🇬🇪 +995</option>
+                           <option value="+49">🇩🇪 +49</option>
+                           <option value="+233">🇬🇭 +233</option>
+                           <option value="+30">🇬🇷 +30</option>
+                           <option value="+852">🇭🇰 +852</option>
+                           <option value="+36">🇭🇺 +36</option>
+                           <option value="+91">🇮🇳 +91</option>
+                           <option value="+62">🇮🇩 +62</option>
+                           <option value="+98">🇮🇷 +98</option>
+                           <option value="+964">🇮🇶 +964</option>
+                           <option value="+353">🇮🇪 +353</option>
+                           <option value="+972">🇮🇱 +972</option>
+                           <option value="+39">🇮🇹 +39</option>
+                           <option value="+81">🇯🇵 +81</option>
+                           <option value="+962">🇯🇴 +962</option>
+                           <option value="+7">🇷🇺 +7</option>
+                           <option value="+254">🇰🇪 +254</option>
+                           <option value="+965">🇰🇼 +965</option>
+                           <option value="+996">🇰🇬 +996</option>
+                           <option value="+856">🇱🇦 +856</option>
+                           <option value="+371">🇱🇻 +371</option>
+                           <option value="+961">🇱🇧 +961</option>
+                           <option value="+218">🇱🇾 +218</option>
+                           <option value="+370">🇱🇹 +370</option>
+                           <option value="+352">🇱🇺 +352</option>
+                           <option value="+853">🇲🇴 +853</option>
+                           <option value="+389">🇲🇰 +389</option>
+                           <option value="+261">🇲🇬 +261</option>
+                           <option value="+60">🇲🇾 +60</option>
+                           <option value="+960">🇲🇻 +960</option>
+                           <option value="+223">🇲🇱 +223</option>
+                           <option value="+356">🇲🇹 +356</option>
+                           <option value="+230">🇲🇺 +230</option>
+                           <option value="+52">🇲🇽 +52</option>
+                           <option value="+373">🇲🇩 +373</option>
+                           <option value="+976">🇲🇳 +976</option>
+                           <option value="+212">🇲🇦 +212</option>
+                           <option value="+95">🇲🇲 +95</option>
+                           <option value="+977">🇳🇵 +977</option>
+                           <option value="+31">🇳🇱 +31</option>
+                           <option value="+64">🇳🇿 +64</option>
+                           <option value="+234">🇳🇬 +234</option>
+                           <option value="+47">🇳🇴 +47</option>
+                           <option value="+968">🇴🇲 +968</option>
+                           <option value="+507">🇵🇦 +507</option>
+                           <option value="+51">🇵🇪 +51</option>
+                           <option value="+63">🇵🇭 +63</option>
+                           <option value="+48">🇵🇱 +48</option>
+                           <option value="+351">🇵🇹 +351</option>
+                           <option value="+974">🇶🇦 +974</option>
+                           <option value="+40">🇷🇴 +40</option>
+                           <option value="+966">🇸🇦 +966</option>
+                           <option value="+65">🇸🇬 +65</option>
+                           <option value="+421">🇸🇰 +421</option>
+                           <option value="+386">🇸🇮 +386</option>
+                           <option value="+27">🇿🇦 +27</option>
+                           <option value="+82">🇰🇷 +82</option>
+                           <option value="+34">🇪🇸 +34</option>
+                           <option value="+94">🇱🇰 +94</option>
+                           <option value="+46">🇸🇪 +46</option>
+                           <option value="+41">🇨🇭 +41</option>
+                           <option value="+886">🇹🇼 +886</option>
+                           <option value="+66">🇹🇭 +66</option>
+                           <option value="+90">🇹🇷 +90</option>
+                           <option value="+44">🇬🇧 +44</option>
+                           <option value="+380">🇺🇦 +380</option>
+                           <option value="+598">🇺🇾 +598</option>
+                           <option value="+998">🇺🇿 +998</option>
+                           <option value="+58">🇻🇪 +58</option>
+                           <option value="+84">🇻🇳 +84</option>
+                           <option value="+967">🇾🇪 +967</option>
+                           <option value="+260">🇿🇲 +260</option>
+                           <option value="+263">🇿🇼 +263</option>
+                        </select>
+                        <input type="text" name="PHONE" id="PHONE" placeholder="Phone/Mobile" required
+                           pattern="[0-9]{6,14}">
+                     </div>
+                     <input autocomplete="off" id="DOMAIN" name="DOMAIN" maxlength="200" type="hidden"
+                        value="https://www.godrej-plot.in/panipat-plots/in">
+
+
+                     <div class="col-lg-12 form-group">
+                        <div class="advanced-button">
+                           <button class="header_phone theme_button" id="SubmitQuerytop" type="submit">GET CALL
+                              BACK</button>
+                           <input autocomplete="off" id="PROJECT" name="PROJECT" maxlength="200" type="hidden"
+                              value="Godrej Evora Estate ">
+                           <input autocomplete="off" id="LOCATION" name="LOCATION" maxlength="200" type="hidden"
+                              value="Panipat - International ">
+                           <input autocomplete="off" id="TEAM" name="TEAM" maxlength="200" type="hidden"
+                              value="umikoindia">
+                           <div class="form-group b-user-message">
+                              <label class="control-label" for="USER_MESSAGE">&nbsp;</label>
+                              <input id="USER_MESSAGE" type="text" name="USER_MESSAGE" tabindex="-1" value=""
+                                 autocomplete="off" />
+
+                           </div>
+                        </div>
+                     </div>
+                     <div class="form-response"></div>
+
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+
+   <!-- modal popup on restart -->
+   <div class="modal fade madal-reload" id="exampleModal" tabindex="-1" role="dialog"
+      aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+         <div class="modal-content">
+            <div class="modal-header">
+
+               <button type="button" class="close btan_g" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+               </button>
+            </div>
+            <div class="modal-body ">
+
+               <div class="row pt-2 align-items-center">
+
+                  <div class="popup-image col-md-6">
+                     <img src="img/gallery_1.webp" alt="image" width="100%">
+                  </div>
+
+                  <div class="col-md-6 col-sm-12">
+                     <div class="form_modal text-center">
+                        <div class="motal_form_text pb-2">
+                           <h5 class="modal-title" id="exampleModalLabel">Godrej Evora Estate</h5>
+                           <p class="mb-1 pt-2 mb-2 mt-1"><b> Type : </b> Premium Plots</p>
+
+                        </div>
+                        <form method="post" action="https://fdr-api.pixleo.com/lead"
+                           class="contact-form banner_form pt-2">
+                           <div class="form_sectionr row text-center justify-content-center">
+
+                              <div class="mb-3 position-relative col-lg-12">
+                                 <input autocomplete="off" id="FIRSTNAME" name="FIRSTNAME"
+                                    class="form-control text_form"
+                                    data-error="Name cannot contain digit or special character"
+                                    placeholder="Your Full Name" required="">
+                                 <span class="icon-inside"><i class="fas fa-user"></i></span>
+                              </div>
+                              <div class="mb-3 position-relative col-lg-12">
+                                 <input autocomplete="off" id="EMAIL" name="EMAIL"
+                                    class="form-control text_form email-address"
+                                    data-error="Name cannot contain digit or special character"
+                                    placeholder="Email Address" pattern="\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+"
+                                    required="">
+                                 <span class="icon-inside"><i class="fas fa-envelope"></i></span>
+                              </div>
+                               <div class="phone-group mb-3">
+                        <select name="COUNTRYCODE" id="COUNTRYCODE" required>
+                           
+                           
+                           <option value="+971">🇦🇪 +971</option>
+                           <option value="+93">🇦🇫 +93</option>
+                           <option value="+355">🇦🇱 +355</option>
+                           <option value="+213">🇩🇿 +213</option>
+                           <option value="+376">🇦🇩 +376</option>
+                           <option value="+244">🇦🇴 +244</option>
+                           <option value="+1-268">🇦🇬 +1-268</option>
+                           <option value="+54">🇦🇷 +54</option>
+                           <option value="+374">🇦🇲 +374</option>
+                           <option value="+61">🇦🇺 +61</option>
+                           <option value="+43">🇦🇹 +43</option>
+                           <option value="+994">🇦🇿 +994</option>
+                           <option value="+973">🇧🇭 +973</option>
+                           <option value="+880">🇧🇩 +880</option>
+                           <option value="+375">🇧🇾 +375</option>
+                           <option value="+32">🇧🇪 +32</option>
+                           <option value="+501">🇧🇿 +501</option>
+                           <option value="+229">🇧🇯 +229</option>
+                           <option value="+975">🇧🇹 +975</option>
+                           <option value="+591">🇧🇴 +591</option>
+                           <option value="+387">🇧🇦 +387</option>
+                           <option value="+267">🇧🇼 +267</option>
+                           <option value="+55">🇧🇷 +55</option>
+                           <option value="+673">🇧🇳 +673</option>
+                           <option value="+359">🇧🇬 +359</option>
+                           <option value="+226">🇧🇫 +226</option>
+                           <option value="+95">🇲🇲 +95</option>
+                           <option value="+257">🇧🇮 +257</option>
+                           <option value="+855">🇰🇭 +855</option>
+                           <option value="+237">🇨🇲 +237</option>
+                           <option value="+1">🇨🇦 +1</option>
+                           <option value="+238">🇨🇻 +238</option>
+                           <option value="+236">🇨🇫 +236</option>
+                           <option value="+235">🇹🇩 +235</option>
+                           <option value="+56">🇨🇱 +56</option>
+                           <option value="+86">🇨🇳 +86</option>
+                           <option value="+57">🇨🇴 +57</option>
+                           <option value="+269">🇰🇲 +269</option>
+                           <option value="+506">🇨🇷 +506</option>
+                           <option value="+385">🇭🇷 +385</option>
+                           <option value="+53">🇨🇺 +53</option>
+                           <option value="+357">🇨🇾 +357</option>
+                           <option value="+420">🇨🇿 +420</option>
+                           <option value="+45">🇩🇰 +45</option>
+                           <option value="+253">🇩🇯 +253</option>
+                           <option value="+1-767">🇩🇲 +1-767</option>
+                           <option value="+1-809">🇩🇴 +1-809</option>
+                           <option value="+593">🇪🇨 +593</option>
+                           <option value="+20">🇪🇬 +20</option>
+                           <option value="+503">🇸🇻 +503</option>
+                           <option value="+240">🇬🇶 +240</option>
+                           <option value="+291">🇪🇷 +291</option>
+                           <option value="+372">🇪🇪 +372</option>
+                           <option value="+251">🇪🇹 +251</option>
+                           <option value="+679">🇫🇯 +679</option>
+                           <option value="+358">🇫🇮 +358</option>
+                           <option value="+33">🇫🇷 +33</option>
+                           <option value="+995">🇬🇪 +995</option>
+                           <option value="+49">🇩🇪 +49</option>
+                           <option value="+233">🇬🇭 +233</option>
+                           <option value="+30">🇬🇷 +30</option>
+                           <option value="+852">🇭🇰 +852</option>
+                           <option value="+36">🇭🇺 +36</option>
+                           <option value="+91">🇮🇳 +91</option>
+                           <option value="+62">🇮🇩 +62</option>
+                           <option value="+98">🇮🇷 +98</option>
+                           <option value="+964">🇮🇶 +964</option>
+                           <option value="+353">🇮🇪 +353</option>
+                           <option value="+972">🇮🇱 +972</option>
+                           <option value="+39">🇮🇹 +39</option>
+                           <option value="+81">🇯🇵 +81</option>
+                           <option value="+962">🇯🇴 +962</option>
+                           <option value="+7">🇷🇺 +7</option>
+                           <option value="+254">🇰🇪 +254</option>
+                           <option value="+965">🇰🇼 +965</option>
+                           <option value="+996">🇰🇬 +996</option>
+                           <option value="+856">🇱🇦 +856</option>
+                           <option value="+371">🇱🇻 +371</option>
+                           <option value="+961">🇱🇧 +961</option>
+                           <option value="+218">🇱🇾 +218</option>
+                           <option value="+370">🇱🇹 +370</option>
+                           <option value="+352">🇱🇺 +352</option>
+                           <option value="+853">🇲🇴 +853</option>
+                           <option value="+389">🇲🇰 +389</option>
+                           <option value="+261">🇲🇬 +261</option>
+                           <option value="+60">🇲🇾 +60</option>
+                           <option value="+960">🇲🇻 +960</option>
+                           <option value="+223">🇲🇱 +223</option>
+                           <option value="+356">🇲🇹 +356</option>
+                           <option value="+230">🇲🇺 +230</option>
+                           <option value="+52">🇲🇽 +52</option>
+                           <option value="+373">🇲🇩 +373</option>
+                           <option value="+976">🇲🇳 +976</option>
+                           <option value="+212">🇲🇦 +212</option>
+                           <option value="+95">🇲🇲 +95</option>
+                           <option value="+977">🇳🇵 +977</option>
+                           <option value="+31">🇳🇱 +31</option>
+                           <option value="+64">🇳🇿 +64</option>
+                           <option value="+234">🇳🇬 +234</option>
+                           <option value="+47">🇳🇴 +47</option>
+                           <option value="+968">🇴🇲 +968</option>
+                           <option value="+507">🇵🇦 +507</option>
+                           <option value="+51">🇵🇪 +51</option>
+                           <option value="+63">🇵🇭 +63</option>
+                           <option value="+48">🇵🇱 +48</option>
+                           <option value="+351">🇵🇹 +351</option>
+                           <option value="+974">🇶🇦 +974</option>
+                           <option value="+40">🇷🇴 +40</option>
+                           <option value="+966">🇸🇦 +966</option>
+                           <option value="+65">🇸🇬 +65</option>
+                           <option value="+421">🇸🇰 +421</option>
+                           <option value="+386">🇸🇮 +386</option>
+                           <option value="+27">🇿🇦 +27</option>
+                           <option value="+82">🇰🇷 +82</option>
+                           <option value="+34">🇪🇸 +34</option>
+                           <option value="+94">🇱🇰 +94</option>
+                           <option value="+46">🇸🇪 +46</option>
+                           <option value="+41">🇨🇭 +41</option>
+                           <option value="+886">🇹🇼 +886</option>
+                           <option value="+66">🇹🇭 +66</option>
+                           <option value="+90">🇹🇷 +90</option>
+                           <option value="+44">🇬🇧 +44</option>
+                           <option value="+380">🇺🇦 +380</option>
+                           <option value="+598">🇺🇾 +598</option>
+                           <option value="+998">🇺🇿 +998</option>
+                           <option value="+58">🇻🇪 +58</option>
+                           <option value="+84">🇻🇳 +84</option>
+                           <option value="+967">🇾🇪 +967</option>
+                           <option value="+260">🇿🇲 +260</option>
+                           <option value="+263">🇿🇼 +263</option>
+                        </select>
+                        <input type="text" name="PHONE" id="PHONE" placeholder="Phone/Mobile" required
+                           pattern="[0-9]{6,14}">
+                     </div>
+                              <input autocomplete="off" id="DOMAIN" name="DOMAIN" maxlength="200" type="hidden"
+                                 value="https://www.godrej-plot.in/panipat-plots/in">
+
+                              <div class="col-lg-12 form-group">
+                                 <div class="advanced-button">
+                                    <button class="header_phone theme_button" id="SubmitQuerytop" type="submit">GET
+                                       CALL BACK</button>
+                                    <input autocomplete="off" id="PROJECT" name="PROJECT" maxlength="200" type="hidden"
+                                       value="Godrej Evora Estate ">
+                                    <input autocomplete=" off" id="LOCATION" name="LOCATION" maxlength="200"
+                                       type="hidden" value="Panipat- International ">
+                                    <input autocomplete="off" id="TEAM" name="TEAM" maxlength="200" type="hidden"
+                                       value="umikoindia">
+                                    <div class="form-group b-user-message">
+                                       <label class="control-label" for="USER_MESSAGE">&nbsp;</label>
+                                       <input id="USER_MESSAGE" type="text" name="USER_MESSAGE" tabindex="-1" value=""
+                                          autocomplete="off" />
+
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="form-response"></div>
+                           </div>
+                        </form>
+                     </div>
+                  </div>
+
+               </div>
+            </div>
+
+
+         </div>
+      </div>
+   </div>
+   <!--  -->
+
+
+
+   <!-- ===========================btn sticky icon start================================== -->
+   <div class="sticky_icon">
+      <div class="social_icon">
+         <ul class="d-flex">
+            <div class="col-4">
+               <li><a href="tel:+91-9071051009">Phone</a></li>
+            </div>
+            <div class="col-4">
+               <li><a href="https://api.whatsapp.com/send?phone=919910111300 &amp;text=Hello, Godrej Evora Estate Haryana Get in touch with me my name is"
+                     target="_blank" class="fixed-Whatsapp">Whatsapp</a></li>
+            </div>
+            <div class="col-4 border-0">
+               <li><a class="btnOpenForm" href="#">Enquire</a></li>
+            </div>
+         </ul>
+      </div>
+   </div>
+
+   <!-- ==============btn scroll section start===================== -->
+   <div class="go-top"> </div>
+   <!-- =====================header sart ======================== -->
+
+   <header>
+      <div class="header py-lg-2 py-2 px-lg-5 px-2">
+         <div class="container-xll mx-lg-3 mx-3 header_with">
+            <div class="row align-items-center">
+               <div class="col-lg-2  text-start">
+                  <div class="logo d-flex"> <a class="logo_1" href="#"><img src="img/logo1.png" alt="logo1"
+                           width="220"></a> </div>
+               </div>
+               <div class="col-lg-7">
+                  <div class="menu float-end">
+                     <ul class="d-lg-flex align-items-center">
+                        <li><a class="active hamberger" href="#">Home</a></li>
+                        <li> <a class="hamberger" href="#floorplan">Site Layout</a></li>
+                        <li> <a class="hamberger" href="#price">Price List</a></li>
+                        <li><a class="hamberger" href="#gallery_jump">Gallery</a></li>
+                        <li class="me-lg-5"><a class="hamberger" href="#location_jump">Location</a></li>
+
+
+                     </ul>
+                     <div class="hamberger">
+                        <div class="mobilemenu"> </div>
+                     </div>
+
+                  </div>
+               </div>
+
+               <div class="col-lg-3">
+                  <div class="contect-us float-end " style="float: right !important;">
+                     <div class="d-flex ">
+                        <ul class="d-flex me-2 align-items-center">
+                           <li><a href="tel:+91-9071051009"><i class="fa fa-phone" aria-hidden="true"></i></a>
+                           </li>
+                           <li> <a href="tel:+91-9071051009"><span>+91-9071051009</span></a> </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </header>
+
+   <!-- =========================header close ========================== -->
+
+   <!-- =========================header close ========================== -->
+
+   <div class="banner_bg">
+      <div class="banner">
+         <div class="banner_img">
+            <div class="img_banner">
+               <img src="img/banner_2.jpg" width="100%" alt="banner_bg">
+            </div>
+            <div class="banner_text mx-md-3">
+               <div class="container-fluid mx-lg-5 px-lg-5">
+                  <div class="row align-items-center">
+
+                     <div class="col-lg-7 col-md-6">
+                        <div class="banner_wrapper_text">
+
+                           <h1 class="mb-1 mt-2">Godrej Evora Estate</h1>
+
+                           <h6 class="mb-md-3 mb-4"><span><i class="fa-solid fa-location-dot me-2"></i></span>At
+                              Delhi-Chandigarh highway, Panipat <br> <br> Haryana <br> </h6>
+                           <h5>
+                           </h5>
+                           <div class="banner_highlight mt-3">
+                              <ul class="">
+                                 <li class="mb-3">
+                                    <h3 class=""><i class="fa-solid fa-check-to-slot me-2"></i>Booking Amount:* ₹5,00,000
+                                    </h3>
+                                 </li>
+
+                                 <li class="mb-3">
+                                    <h3 class=""><i class="fa-solid fa-check-to-slot me-2"></i>Land Parcel: 43 Acres
+                                    </h3>
+                                 </li>
+                                 <li class="mb-3">
+                                    <h3 class=""><i class="fa-solid fa-check-to-slot me-2"></i>Total Plots: 750 approx
+                                    </h3>
+                                 </li>
+                                 <li class="mb-3">
+                                    <h3 class=""><i class="fa-solid fa-check-to-slot me-2"></i>EOI Amount: ₹5 Lakh (In
+                                       favour of GODREJ) </h3>
+                                 </li>
+
+
+                              </ul>
+                           </div>
+
+
+
+                           <div class="bgk mt-lg-5">
+                              <ul class="mt-3 d-flex align-items-center">
+
+                                 <li class="">
+                                    <h3 class=""> Premium Plots Starts At:</h3>
+                                    <p class="mt-lg-3 mt-2">₹ 1.07 Lac/Sq.Yd.<sub class="fs-5"> </sub></p>
+                                 </li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+
+
+
+
+
+
+                     <div class="col-lg-5 mb-mobile mb-mobile col-md-6 d-none d-md-block">
+
+                        <div class="Banner-form  float-end">
+                           <form method="post" action="https://fdr-api.pixleo.com/lead"
+                              class="contact-form banner_form">
+                              <div class="form_section text-center">
+                                 <h3 class="form_title mb-2">Schedule A Site Visit</h3>
+                                 <p class="mb-4">Please fill out the form below, our expert will get back to you soon.
+                                 </p>
+                                 <div class="mb-2 mb-xxl-4 position-relative">
+                                    <input autocomplete="off" id="FIRSTNAME" name="FIRSTNAME"
+                                       class="form-control text_form"
+                                       data-error="Name cannot contain digit or special character"
+                                       placeholder="Your Full Name" required="">
+                                    <span class="icon-inside"><i class="fas fa-user"></i></span>
+                                 </div>
+                                 <div class="mb-2 mb-xxl-4 position-relative">
+                                    <input autocomplete="off" id="EMAIL" name="EMAIL"
+                                       class="form-control text_form email-address"
+                                       data-error="Name cannot contain digit or special character"
+                                       placeholder="Email Address" pattern="\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+"
+                                       required="">
+                                    <span class="icon-inside"><i class="fas fa-envelope"></i></span>
+                                 </div>
+                                  <div class="phone-group mb-3">
+                        <select name="COUNTRYCODE" id="COUNTRYCODE" required>
+                           
+                           
+                           <option value="+971">🇦🇪 +971</option>
+                           <option value="+93">🇦🇫 +93</option>
+                           <option value="+355">🇦🇱 +355</option>
+                           <option value="+213">🇩🇿 +213</option>
+                           <option value="+376">🇦🇩 +376</option>
+                           <option value="+244">🇦🇴 +244</option>
+                           <option value="+1-268">🇦🇬 +1-268</option>
+                           <option value="+54">🇦🇷 +54</option>
+                           <option value="+374">🇦🇲 +374</option>
+                           <option value="+61">🇦🇺 +61</option>
+                           <option value="+43">🇦🇹 +43</option>
+                           <option value="+994">🇦🇿 +994</option>
+                           <option value="+973">🇧🇭 +973</option>
+                           <option value="+880">🇧🇩 +880</option>
+                           <option value="+375">🇧🇾 +375</option>
+                           <option value="+32">🇧🇪 +32</option>
+                           <option value="+501">🇧🇿 +501</option>
+                           <option value="+229">🇧🇯 +229</option>
+                           <option value="+975">🇧🇹 +975</option>
+                           <option value="+591">🇧🇴 +591</option>
+                           <option value="+387">🇧🇦 +387</option>
+                           <option value="+267">🇧🇼 +267</option>
+                           <option value="+55">🇧🇷 +55</option>
+                           <option value="+673">🇧🇳 +673</option>
+                           <option value="+359">🇧🇬 +359</option>
+                           <option value="+226">🇧🇫 +226</option>
+                           <option value="+95">🇲🇲 +95</option>
+                           <option value="+257">🇧🇮 +257</option>
+                           <option value="+855">🇰🇭 +855</option>
+                           <option value="+237">🇨🇲 +237</option>
+                           <option value="+1">🇨🇦 +1</option>
+                           <option value="+238">🇨🇻 +238</option>
+                           <option value="+236">🇨🇫 +236</option>
+                           <option value="+235">🇹🇩 +235</option>
+                           <option value="+56">🇨🇱 +56</option>
+                           <option value="+86">🇨🇳 +86</option>
+                           <option value="+57">🇨🇴 +57</option>
+                           <option value="+269">🇰🇲 +269</option>
+                           <option value="+506">🇨🇷 +506</option>
+                           <option value="+385">🇭🇷 +385</option>
+                           <option value="+53">🇨🇺 +53</option>
+                           <option value="+357">🇨🇾 +357</option>
+                           <option value="+420">🇨🇿 +420</option>
+                           <option value="+45">🇩🇰 +45</option>
+                           <option value="+253">🇩🇯 +253</option>
+                           <option value="+1-767">🇩🇲 +1-767</option>
+                           <option value="+1-809">🇩🇴 +1-809</option>
+                           <option value="+593">🇪🇨 +593</option>
+                           <option value="+20">🇪🇬 +20</option>
+                           <option value="+503">🇸🇻 +503</option>
+                           <option value="+240">🇬🇶 +240</option>
+                           <option value="+291">🇪🇷 +291</option>
+                           <option value="+372">🇪🇪 +372</option>
+                           <option value="+251">🇪🇹 +251</option>
+                           <option value="+679">🇫🇯 +679</option>
+                           <option value="+358">🇫🇮 +358</option>
+                           <option value="+33">🇫🇷 +33</option>
+                           <option value="+995">🇬🇪 +995</option>
+                           <option value="+49">🇩🇪 +49</option>
+                           <option value="+233">🇬🇭 +233</option>
+                           <option value="+30">🇬🇷 +30</option>
+                           <option value="+852">🇭🇰 +852</option>
+                           <option value="+36">🇭🇺 +36</option>
+                           <option value="+91">🇮🇳 +91</option>
+                           <option value="+62">🇮🇩 +62</option>
+                           <option value="+98">🇮🇷 +98</option>
+                           <option value="+964">🇮🇶 +964</option>
+                           <option value="+353">🇮🇪 +353</option>
+                           <option value="+972">🇮🇱 +972</option>
+                           <option value="+39">🇮🇹 +39</option>
+                           <option value="+81">🇯🇵 +81</option>
+                           <option value="+962">🇯🇴 +962</option>
+                           <option value="+7">🇷🇺 +7</option>
+                           <option value="+254">🇰🇪 +254</option>
+                           <option value="+965">🇰🇼 +965</option>
+                           <option value="+996">🇰🇬 +996</option>
+                           <option value="+856">🇱🇦 +856</option>
+                           <option value="+371">🇱🇻 +371</option>
+                           <option value="+961">🇱🇧 +961</option>
+                           <option value="+218">🇱🇾 +218</option>
+                           <option value="+370">🇱🇹 +370</option>
+                           <option value="+352">🇱🇺 +352</option>
+                           <option value="+853">🇲🇴 +853</option>
+                           <option value="+389">🇲🇰 +389</option>
+                           <option value="+261">🇲🇬 +261</option>
+                           <option value="+60">🇲🇾 +60</option>
+                           <option value="+960">🇲🇻 +960</option>
+                           <option value="+223">🇲🇱 +223</option>
+                           <option value="+356">🇲🇹 +356</option>
+                           <option value="+230">🇲🇺 +230</option>
+                           <option value="+52">🇲🇽 +52</option>
+                           <option value="+373">🇲🇩 +373</option>
+                           <option value="+976">🇲🇳 +976</option>
+                           <option value="+212">🇲🇦 +212</option>
+                           <option value="+95">🇲🇲 +95</option>
+                           <option value="+977">🇳🇵 +977</option>
+                           <option value="+31">🇳🇱 +31</option>
+                           <option value="+64">🇳🇿 +64</option>
+                           <option value="+234">🇳🇬 +234</option>
+                           <option value="+47">🇳🇴 +47</option>
+                           <option value="+968">🇴🇲 +968</option>
+                           <option value="+507">🇵🇦 +507</option>
+                           <option value="+51">🇵🇪 +51</option>
+                           <option value="+63">🇵🇭 +63</option>
+                           <option value="+48">🇵🇱 +48</option>
+                           <option value="+351">🇵🇹 +351</option>
+                           <option value="+974">🇶🇦 +974</option>
+                           <option value="+40">🇷🇴 +40</option>
+                           <option value="+966">🇸🇦 +966</option>
+                           <option value="+65">🇸🇬 +65</option>
+                           <option value="+421">🇸🇰 +421</option>
+                           <option value="+386">🇸🇮 +386</option>
+                           <option value="+27">🇿🇦 +27</option>
+                           <option value="+82">🇰🇷 +82</option>
+                           <option value="+34">🇪🇸 +34</option>
+                           <option value="+94">🇱🇰 +94</option>
+                           <option value="+46">🇸🇪 +46</option>
+                           <option value="+41">🇨🇭 +41</option>
+                           <option value="+886">🇹🇼 +886</option>
+                           <option value="+66">🇹🇭 +66</option>
+                           <option value="+90">🇹🇷 +90</option>
+                           <option value="+44">🇬🇧 +44</option>
+                           <option value="+380">🇺🇦 +380</option>
+                           <option value="+598">🇺🇾 +598</option>
+                           <option value="+998">🇺🇿 +998</option>
+                           <option value="+58">🇻🇪 +58</option>
+                           <option value="+84">🇻🇳 +84</option>
+                           <option value="+967">🇾🇪 +967</option>
+                           <option value="+260">🇿🇲 +260</option>
+                           <option value="+263">🇿🇼 +263</option>
+                        </select>
+                        <input type="text" name="PHONE" id="PHONE" placeholder="Phone/Mobile" required
+                           pattern="[0-9]{6,14}">
+                     </div>
+                                 <input autocomplete="off" id="DOMAIN" name="DOMAIN" maxlength="200" type="hidden"
+                                    value="https://www.godrej-plot.in/panipat-plots/in">
+
+                                 <div class="col-lg-12 form-group">
+                                    <div class="advanced-button">
+                                       <button class="header_phone theme_button" id="SubmitQuerytop" type="submit">GET
+                                          CALL BACK</button>
+                                       <input autocomplete="off" id="PROJECT" name="PROJECT" maxlength="200"
+                                          type="hidden" value="Godrej Evora Estate ">
+                                       <input autocomplete=" off" id="LOCATION" name="LOCATION" maxlength="200"
+                                          type="hidden" value="Panipat- International ">
+                                       <input autocomplete="off" id="TEAM" name="TEAM" maxlength="200" type="hidden"
+                                          value="umikoindia">
+                                       <div class="form-group b-user-message">
+                                          <label class="control-label" for="USER_MESSAGE">&nbsp;</label>
+                                          <input id="USER_MESSAGE" type="text" name="USER_MESSAGE" tabindex="-1"
+                                             value="" autocomplete="off" />
+
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="form-response"></div>
+                              </div>
+                           </form>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+
+         </div>
+      </div>
+      <div class="highlight_tag mt-3">
+         <img src="img/highlight_tag.png" alt="highlights">
+      </div>
+
+   </div>
+
+   <!-- banner section closed -->
+   <div class="form_bottom">
+      <div class="col-lg-4 mb-mobile col-md-5 d-block d-md-none">
+         <div class="Banner-form-mb">
+            <form method="post" action="https://fdr-api.pixleo.com/lead" class="contact-form banner_form">
+               <div class="form_section text-center">
+                  <h3 class="form_title mb-2">Schedule A Site Visit</h3>
+                  <p class="mb-4">Please fill out the form below, our expert will get back to you soon.
+                  </p>
+                  <div class="mb-2 mb-xxl-4 position-relative">
+                     <input autocomplete="off" id="FIRSTNAME" name="FIRSTNAME" class="form-control text_form"
+                        data-error="Name cannot contain digit or special character" placeholder="Your Full Name"
+                        required="">
+                     <span class="icon-inside"><i class="fas fa-user"></i></span>
+                  </div>
+                  <div class="mb-2 mb-xxl-4 position-relative">
+                     <input autocomplete="off" id="EMAIL" name="EMAIL" class="form-control text_form email-address"
+                        data-error="Name cannot contain digit or special character" placeholder="Email Address"
+                        pattern="\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+" required="">
+                     <span class="icon-inside"><i class="fas fa-envelope"></i></span>
+                  </div>
+                   <div class="phone-group mb-3">
+                        <select name="COUNTRYCODE" id="COUNTRYCODE" required>
+                           
+                           
+                           <option value="+971">🇦🇪 +971</option>
+                           <option value="+93">🇦🇫 +93</option>
+                           <option value="+355">🇦🇱 +355</option>
+                           <option value="+213">🇩🇿 +213</option>
+                           <option value="+376">🇦🇩 +376</option>
+                           <option value="+244">🇦🇴 +244</option>
+                           <option value="+1-268">🇦🇬 +1-268</option>
+                           <option value="+54">🇦🇷 +54</option>
+                           <option value="+374">🇦🇲 +374</option>
+                           <option value="+61">🇦🇺 +61</option>
+                           <option value="+43">🇦🇹 +43</option>
+                           <option value="+994">🇦🇿 +994</option>
+                           <option value="+973">🇧🇭 +973</option>
+                           <option value="+880">🇧🇩 +880</option>
+                           <option value="+375">🇧🇾 +375</option>
+                           <option value="+32">🇧🇪 +32</option>
+                           <option value="+501">🇧🇿 +501</option>
+                           <option value="+229">🇧🇯 +229</option>
+                           <option value="+975">🇧🇹 +975</option>
+                           <option value="+591">🇧🇴 +591</option>
+                           <option value="+387">🇧🇦 +387</option>
+                           <option value="+267">🇧🇼 +267</option>
+                           <option value="+55">🇧🇷 +55</option>
+                           <option value="+673">🇧🇳 +673</option>
+                           <option value="+359">🇧🇬 +359</option>
+                           <option value="+226">🇧🇫 +226</option>
+                           <option value="+95">🇲🇲 +95</option>
+                           <option value="+257">🇧🇮 +257</option>
+                           <option value="+855">🇰🇭 +855</option>
+                           <option value="+237">🇨🇲 +237</option>
+                           <option value="+1">🇨🇦 +1</option>
+                           <option value="+238">🇨🇻 +238</option>
+                           <option value="+236">🇨🇫 +236</option>
+                           <option value="+235">🇹🇩 +235</option>
+                           <option value="+56">🇨🇱 +56</option>
+                           <option value="+86">🇨🇳 +86</option>
+                           <option value="+57">🇨🇴 +57</option>
+                           <option value="+269">🇰🇲 +269</option>
+                           <option value="+506">🇨🇷 +506</option>
+                           <option value="+385">🇭🇷 +385</option>
+                           <option value="+53">🇨🇺 +53</option>
+                           <option value="+357">🇨🇾 +357</option>
+                           <option value="+420">🇨🇿 +420</option>
+                           <option value="+45">🇩🇰 +45</option>
+                           <option value="+253">🇩🇯 +253</option>
+                           <option value="+1-767">🇩🇲 +1-767</option>
+                           <option value="+1-809">🇩🇴 +1-809</option>
+                           <option value="+593">🇪🇨 +593</option>
+                           <option value="+20">🇪🇬 +20</option>
+                           <option value="+503">🇸🇻 +503</option>
+                           <option value="+240">🇬🇶 +240</option>
+                           <option value="+291">🇪🇷 +291</option>
+                           <option value="+372">🇪🇪 +372</option>
+                           <option value="+251">🇪🇹 +251</option>
+                           <option value="+679">🇫🇯 +679</option>
+                           <option value="+358">🇫🇮 +358</option>
+                           <option value="+33">🇫🇷 +33</option>
+                           <option value="+995">🇬🇪 +995</option>
+                           <option value="+49">🇩🇪 +49</option>
+                           <option value="+233">🇬🇭 +233</option>
+                           <option value="+30">🇬🇷 +30</option>
+                           <option value="+852">🇭🇰 +852</option>
+                           <option value="+36">🇭🇺 +36</option>
+                           <option value="+91">🇮🇳 +91</option>
+                           <option value="+62">🇮🇩 +62</option>
+                           <option value="+98">🇮🇷 +98</option>
+                           <option value="+964">🇮🇶 +964</option>
+                           <option value="+353">🇮🇪 +353</option>
+                           <option value="+972">🇮🇱 +972</option>
+                           <option value="+39">🇮🇹 +39</option>
+                           <option value="+81">🇯🇵 +81</option>
+                           <option value="+962">🇯🇴 +962</option>
+                           <option value="+7">🇷🇺 +7</option>
+                           <option value="+254">🇰🇪 +254</option>
+                           <option value="+965">🇰🇼 +965</option>
+                           <option value="+996">🇰🇬 +996</option>
+                           <option value="+856">🇱🇦 +856</option>
+                           <option value="+371">🇱🇻 +371</option>
+                           <option value="+961">🇱🇧 +961</option>
+                           <option value="+218">🇱🇾 +218</option>
+                           <option value="+370">🇱🇹 +370</option>
+                           <option value="+352">🇱🇺 +352</option>
+                           <option value="+853">🇲🇴 +853</option>
+                           <option value="+389">🇲🇰 +389</option>
+                           <option value="+261">🇲🇬 +261</option>
+                           <option value="+60">🇲🇾 +60</option>
+                           <option value="+960">🇲🇻 +960</option>
+                           <option value="+223">🇲🇱 +223</option>
+                           <option value="+356">🇲🇹 +356</option>
+                           <option value="+230">🇲🇺 +230</option>
+                           <option value="+52">🇲🇽 +52</option>
+                           <option value="+373">🇲🇩 +373</option>
+                           <option value="+976">🇲🇳 +976</option>
+                           <option value="+212">🇲🇦 +212</option>
+                           <option value="+95">🇲🇲 +95</option>
+                           <option value="+977">🇳🇵 +977</option>
+                           <option value="+31">🇳🇱 +31</option>
+                           <option value="+64">🇳🇿 +64</option>
+                           <option value="+234">🇳🇬 +234</option>
+                           <option value="+47">🇳🇴 +47</option>
+                           <option value="+968">🇴🇲 +968</option>
+                           <option value="+507">🇵🇦 +507</option>
+                           <option value="+51">🇵🇪 +51</option>
+                           <option value="+63">🇵🇭 +63</option>
+                           <option value="+48">🇵🇱 +48</option>
+                           <option value="+351">🇵🇹 +351</option>
+                           <option value="+974">🇶🇦 +974</option>
+                           <option value="+40">🇷🇴 +40</option>
+                           <option value="+966">🇸🇦 +966</option>
+                           <option value="+65">🇸🇬 +65</option>
+                           <option value="+421">🇸🇰 +421</option>
+                           <option value="+386">🇸🇮 +386</option>
+                           <option value="+27">🇿🇦 +27</option>
+                           <option value="+82">🇰🇷 +82</option>
+                           <option value="+34">🇪🇸 +34</option>
+                           <option value="+94">🇱🇰 +94</option>
+                           <option value="+46">🇸🇪 +46</option>
+                           <option value="+41">🇨🇭 +41</option>
+                           <option value="+886">🇹🇼 +886</option>
+                           <option value="+66">🇹🇭 +66</option>
+                           <option value="+90">🇹🇷 +90</option>
+                           <option value="+44">🇬🇧 +44</option>
+                           <option value="+380">🇺🇦 +380</option>
+                           <option value="+598">🇺🇾 +598</option>
+                           <option value="+998">🇺🇿 +998</option>
+                           <option value="+58">🇻🇪 +58</option>
+                           <option value="+84">🇻🇳 +84</option>
+                           <option value="+967">🇾🇪 +967</option>
+                           <option value="+260">🇿🇲 +260</option>
+                           <option value="+263">🇿🇼 +263</option>
+                        </select>
+                        <input type="text" name="PHONE" id="PHONE" placeholder="Phone/Mobile" required
+                           pattern="[0-9]{6,14}">
+                     </div>
+                  <input autocomplete="off" id="DOMAIN" name="DOMAIN" maxlength="200" type="hidden"
+                     value="https://www.godrej-plot.in/panipat-plots/in">
+
+                  <div class="col-lg-12 form-group">
+                     <div class="advanced-button">
+                        <button class="header_phone theme_button" id="SubmitQuerytop" type="submit">GET
+                           CALL BACK</button>
+                        <input autocomplete="off" id="PROJECT" name="PROJECT" maxlength="200" type="hidden"
+                           value="Godrej Evora Estate ">
+                        <input autocomplete=" off" id="LOCATION" name="LOCATION" maxlength="200" type="hidden"
+                           value="Panipat- International ">
+                        <input autocomplete="off" id="TEAM" name="TEAM" maxlength="200" type="hidden"
+                           value="umikoindia">
+                        <div class="form-group b-user-message">
+                           <label class="control-label" for="USER_MESSAGE">&nbsp;</label>
+                           <input id="USER_MESSAGE" type="text" name="USER_MESSAGE" tabindex="-1" value=""
+                              autocomplete="off" />
+
+                        </div>
+                     </div>
+                  </div>
+                  <div class="form-response"></div>
+               </div>
+            </form>
+         </div>
+      </div>
+   </div>
+   <main>
+      <!--================ from section end ============== -->
+      <section id="about">
+         <div class="container">
+            <div class="row align-items-center">
+
+               <div class=" col-lg-6 position-relative mb-4 mb-lg-0">
+                  <img src="img/gallery_5.jpg" alt="Godrej Eternal Palms"
+                     class="about-image1 rounded  w-100 main-img" />
+
+               </div>
+
+
+               <div class="col-lg-6">
+                  <div class="content-box">
+                     <span class="tag"><i class="fas fa-map-marker-alt me-2"></i>At Haryana</span>
+                     <h2 class="mt-3 mb-3 fw-bold text-dark">Godrej Evora Estate</h2>
+                     <p class="my-3">Godrej Properties has acquired a 40-acre licensed land parcel in Panipat, Haryana,
+                        strengthening its presence in North India. Godrej Plots Panipat is a landmark plotted
+                        development offering premium plots of varied sizes. Designed to blend luxury with nature, the
+                        project provides modern amenities, lush green surroundings, and a lifestyle curated by one of
+                        India’s most trusted developers.
+
+                     </p>
+
+
+                     <div class="row text-center my-4 feature-row">
+                        <div class="col-4">
+                           <i class="fas fa-map-marked-alt fa-2x mb-2 "></i>
+                           <p class="mb-0 small fw-semibold">Prime Locations</p>
+                        </div>
+                        <div class="col-4">
+                           <i class="fas fa-lightbulb fa-2x mb-2 "></i>
+                           <p class="mb-0 small fw-semibold">Innovative Design</p>
+                        </div>
+                        <div class="col-4">
+                           <i class="fas fa-check-circle fa-2x mb-2 "></i>
+                           <p class="mb-0 small fw-semibold">Commitment to Quality</p>
+                        </div>
+                     </div>
+
+                     <div class="mt-4 d-flex flex-wrap align-items-center gap-3">
+                        <a href="#" class="btn brochure-btn btnOpenForm"><i
+                              class="fas fa-file-download me-2"></i>Download Brochure</a>
+                        <a href="tel:+919999999999" class="btn call-btn btnOpenForm"><i
+                              class="fas fa-phone me-2"></i>Call Now</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+
+      <section id="highlights">
+         <div class="container-fluid">
+            <div class="d-flex justify-content-center align-items-center w-100">
+               <div class="highlight-hed ">
+                  <h2 class="my-3">Highlights</h2>
+                  <p class="my-2">Uncompromising Quality. Timeless Elegance</p>
+               </div>
+            </div>
+
+
+            <div class="highlight-container my-5">
+               <div class="row mt-4 align-items-center justify-content-center">
+                  <div class="col-lg-6 mb-4 h-100">
+                     <div class="highlight-image h-100">
+                        <img src="img/about-img.webp" alt="image" class=" w-100">
+                     </div>
+                  </div>
+                  <div class="col-lg-5 mb-4 h-100">
+                     <div class="highlights-point h-100">
+                        <div class="highlight-box position-relative">
+                           <h4>Easy reach to Delhi, Sonipat & Karnal</h4>
+                        </div>
+                        <div class="highlight-box position-relative">
+                           <h4>Direct access NH-44 (Delhi–Chandigarh Highway)</h4>
+                        </div>
+
+                        <div class="highlight-box position-relative">
+                           <h4>Direct Link to IGI Airport via UER-2
+                           </h4>
+                        </div>
+                        <div class="highlight-box position-relative">
+                           <h4>ER-2 & KMP Expressway – Multi-city connectivity at its best </h4>
+                        </div>
+                        <div class="highlight-box position-relative">
+                           <h4> Panipat Elevated Expressway – Hassle-free travel towards Delhi NCR
+                           </h4>
+                        </div>
+
+
+
+
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+
+
+
+
+
+
+
+
+
+
+
+      <!--====================== about bg =========== -->
+
+      <!-- <div class="header_line ">
+
+         <marquee direction="left">
+
+            <span>Godrej Greenfront At Hinjewadi Phase 1, Pune</span>
+
+
+         </marquee>
+      </div> -->
+      <!--////////////////// price list section start ///////////////// -->
+
+
+      <section id="price">
+         <div class="price-container">
+            <div class="price-text">
+               <h2 class="my-3 text-white">Price List</h2>
+               <p class="my-3 text-white">Your Gateway to Smart Investments Starts Here </p>
+            </div>
+
+            <div class="price-detail-box">
+               <div class="detail-container">
+                  <div class="row justify-content-center">
+                     <div class="col-lg-6 col-md-6 mb-3">
+                        <div class="price-card">
+                           <div class="text-end mb-3">
+                              <span class="price-category">PLOT </span>
+                           </div>
+                           <!-- <h4 class="mb-3 fs-3">Panipat Plots </h4> -->
+                           <p class="price-detail"> <b>Size</b> :- 130 – 179 Sq.Yd.</p>
+                           <p class="price-detail"><b>Price</b> :- ₹ 1.07 Lac/Sq.Yd.</p>
+                           <div class="mt-4 text-start">
+                              <a href="#" class="btn enquire-btn btnOpenForm">ENQUIRE NOW</a>
+                           </div>
+                        </div>
+                     </div>
+
+
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+
+
+      <!--============  price list end ================ -->
+
+
+
+
+
+      <!-- ========= Site Layout section design ====================== -->
+      <section id="floorplan" class="floorplan-section">
+         <div class="container">
+            <div class="row align-items-center">
+               <div class="col-md-4 mb-5 mb-md-3">
+                  <div class="text-start">
+                     <h2>Site Layout</h2>
+                     <p class="my-3">
+                        Discover Godrej Plots Panipat — thoughtfully planned residential plots offering flexibility to
+                        build your dream home with modern comforts, seamless connectivity, and lush green surroundings
+                        for a balanced lifestyle.
+                     </p>
+                     <div class="mt-4 read-btn" data-aos="fade-left">
+                        <a href="javascript:void(0)" class="btnOpenForm">Read More</a>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-8 mb-3">
+                  <div class="floorplan-container">
+                     <img src="img/ESTATE-360-Master-plan.jpg" alt="Site Layout" class="floorplan-img">
+                     <button class="floorplan-btn btnOpenForm">View Site Layout</button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- ========= Site Layout section design ====================== -->
+
+
+
+      <!-- ===================== gallery section start ==================== -->
+      <!-- ===================== gallery section start ==================== -->
+      <div class="gallery_bg" id="gallery_jump">
+         <div class="row">
+            <!-- IMAGE SLIDER FIRST -->
+            <div class="col-md-7 order-md-1 order-2 mb-3">
+               <div class="gallery-image">
+                  <div class="owl-carousel" id="gallerySlider">
+                     <div class="item"><img src="img/gallery_1.webp" alt="Gallery 1"></div>
+                     <div class="item"><img src="img/gallery_2.webp" alt="Gallery 2"></div>
+                     <div class="item"><img src="img/gallery_3.webp" alt="Gallery 3"></div>
+
+                     <div class="item"><img src="img/gallery_5.jpg" alt="Gallery 4"></div>
+
+                  </div>
+               </div>
+            </div>
+
+            <!-- TEXT SECOND -->
+            <div class="col-md-5 order-md-2 order-1 mbm-3">
+               <div class="gallery-text">
+                  <div class="gallery-card">
+                     <h2 data-aos="fade-left">Gallery</h2>
+                     <p class="my-2" data-aos="fade-up">
+                        Step into the visual journey of Godrej Plots Panipat. Explore captivating landscapes,
+                        thoughtfully designed spaces, and glimpses of modern lifestyle that showcase the harmony of
+                        nature and luxury. Each view reflects the promise of a refined community and an inspiring way of
+                        life.
+                     </p>
+                     <div class="mt-4" data-aos="fade-left">
+                        <a href="#" class="btnOpenForm">View More</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+
+
+
+      <!-- ====================gallery section end===================== -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <!-- =========== amenities section start =============== -->
+      <section id="amenities" class="d-none">
+         <div class="row">
+            <div class="col-md-5 mb-3">
+               <div class="amenities-text ">
+                  <div class="amenities-card">
+                     <h2 data-aos="fade-right">Amenities</h2>
+                     <p class=" my-2 text-dark" data-aos="fade-up">Live the high life at Luxury Launch with exclusive
+                        amenities like an infinity pool, gym,
+                        yoga deck, landscaped gardens, spa, clubhouse, and more – thoughtfully crafted to offer
+                        unmatched
+                        comfort, elegance, convenience, and everyday indulgence.</p>
+                     <div class="mt-4" data-aos="fade-left">
+                        <a href="javascript:void(0)" class="btnOpenForm">Read More</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <div class="col-md-7 mb-5 mb-md-3">
+               <div class="amenities-image">
+                  <div class="owl-carousel" id="amenitiesSlider">
+                     <div class="item"><img src="img/amenities-1.jpg" alt="Amenity 1"></div>
+                     <div class="item"><img src="img/amenities-2.webp" alt="Amenity 2"></div>
+                     <div class="item"><img src="img/amenities-3.jpeg" alt="Amenity 3"></div>
+                     <div class="item"><img src="img/amenities-4.png" alt="Amenity 4"></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- =========== amenities section start =============== -->
+
+
+
+
+
+
+
+      <div class="location_bg" id="location_jump">
+         <div class="location_main">
+            <div class="container">
+               <div class="row justify-content-center align-items-center">
+
+
+                  <div class="col-lg-6">
+                     <div class="location_img">
+                        <img src="img/map.jpg" alt="map" width="100%">
+                     </div>
+                  </div>
+
+                  <div class="col-lg-6">
+                     <div class="location_bg_text mt-5 mt-lg-0 ms-lg-5">
+                        <div class="col-lg-12 text-start mb-3 mb-lg-5">
+
+
+                           <h2 class="mt-2">Location</h2>
+                        </div>
+                        <div class="row">
+                           <div class="col-lg-11">
+                              <div class="location_main">
+                                 <ul>
+                                    <li class="d-flex mb-lg-4 mb-3 align-items-center">
+                                       <h4 class="pe-3">01</h4>
+                                       <h5 class="ps-3"> Panipat City Centre – 7 Mins</h5>
+                                    </li>
+                                    <li class="d-flex mb-lg-4 mb-3 align-items-center">
+                                       <h4 class="pe-3">02</h4>
+                                       <h5 class="ps-3"> Panipat Railway Station – 10 Mins
+                                       </h5>
+                                    </li>
+                                    <li class="d-flex mb-lg-4 mb-3 align-items-center">
+                                       <h4 class="pe-3">03</h4>
+                                       <h5 class="ps-3">Karnal – 30 Mins </h5>
+                                    </li>
+                                    <li class="d-flex mb-lg-4 mb-3 align-items-center">
+                                       <h4 class="pe-3">04</h4>
+                                       <h5 class="ps-3">Sonipat – 45 Mins </h5>
+                                    </li>
+                                    <li class="d-flex mb-lg-4 mb-3 align-items-center">
+                                       <h4 class="pe-3">05</h4>
+                                       <h5 class="ps-3">Delhi Border – 75 Mins</h5>
+                                    </li>
+
+
+
+
+
+                                 </ul>
+                              </div>
+                           </div>
+
+                        </div>
+                     </div>
+                  </div>
+
+
+
+               </div>
+            </div>
+         </div>
+      </div>
+
+
+
+
+      <!-- ====== highlight section design ======== -->
+   </main>
+   <footer>
+      <div class="footer_bg" id="contectus">
+         <div class="footer">
+            <div class="container">
+               <!-- <div class="col-lg-12 text-center mb-5"> <img src="img/logo1.png" width="150" alt=""> </div> -->
+               <div class="row justify-content-center">
+                  <div class="col-lg-7 col-md-6 mb-4">
+                     <div class="footer_contant">
+                        <h3>About Developer</h3>
+                        <p class="mb-3 mt-3 col-lg-11">The Godrej Group comprises of a varied business portfolio that
+                           includes real estate development, fast moving consumer goods, advanced engineering, home
+                           appliances, furniture, security, and agri-care. While a large number of our businesses are
+                           privately held, the combined market cap of our publicly listed entities is in excess of USD
+                           15 billion. Ranked as the 2nd most trusted Indian brand, an annual revenue of USD 5 billion,
+                           and an estimated 1.1 billion customers across the world that use one or another Godrej
+                           product every day, the Godrej Group is amongst India's most diversified and trusted
+                           conglomerates.
+
+                        </p>
+                        <div class="mt-4 mb-4">
+                           <h4 style="color: #000;" class="mt-2 fs-5">Projects Rera : Rera Received </h4>
+                        </div>
+
+                        <div class="contact_us mt-5">
+                           <ul class="d-flex align-items-center">
+                              <li><a href="tel:+91-9071051009">
+                                    <i class="fa-solid fa-phone-volume"></i></a></li>
+                              <li class="ms-3">
+                                 <p class="pb-1">Call Us Anytime</p> <a
+                                    href="tel:+91-9071051009"><span>+91-9071051009</span></a>
+                              </li>
+                           </ul>
+                        </div>
+
+                     </div>
+                  </div>
+                  <div class="col-lg-5 col-md-6 mb-4">
+                     <div class="contect-form">
+                        <form method="post" action="https://fdr-api.pixleo.com/lead" class="contact-form banner_form">
+                           <div class="form_section text-center">
+                              <h3 class="form_title mb-2">Schedule A Site Visit</h3>
+                              <p class="mb-4">Please fill out the form below, our expert will get back to you soon.
+                              </p>
+
+                              <div class="mb-4 position-relative">
+                                 <input autocomplete="off" id="FIRSTNAME" name="FIRSTNAME"
+                                    class="form-control text_form"
+                                    data-error="Name cannot contain digit or special character"
+                                    placeholder="Your Full Name" required="">
+                                 <span class="icon-inside"><i class="fas fa-user"></i></span>
+                              </div>
+                              <div class="mb-4 position-relative">
+                                 <input autocomplete="off" id="EMAIL" name="EMAIL"
+                                    class="form-control text_form email-address"
+                                    data-error="Name cannot contain digit or special character"
+                                    placeholder="Email Address" pattern="\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+"
+                                    required="">
+                                 <span class="icon-inside"><i class="fas fa-envelope"></i></span>
+                              </div>
+                               <div class="phone-group mb-3">
+                        <select name="COUNTRYCODE" id="COUNTRYCODE" required>
+                           
+                           
+                           <option value="+971">🇦🇪 +971</option>
+                           <option value="+93">🇦🇫 +93</option>
+                           <option value="+355">🇦🇱 +355</option>
+                           <option value="+213">🇩🇿 +213</option>
+                           <option value="+376">🇦🇩 +376</option>
+                           <option value="+244">🇦🇴 +244</option>
+                           <option value="+1-268">🇦🇬 +1-268</option>
+                           <option value="+54">🇦🇷 +54</option>
+                           <option value="+374">🇦🇲 +374</option>
+                           <option value="+61">🇦🇺 +61</option>
+                           <option value="+43">🇦🇹 +43</option>
+                           <option value="+994">🇦🇿 +994</option>
+                           <option value="+973">🇧🇭 +973</option>
+                           <option value="+880">🇧🇩 +880</option>
+                           <option value="+375">🇧🇾 +375</option>
+                           <option value="+32">🇧🇪 +32</option>
+                           <option value="+501">🇧🇿 +501</option>
+                           <option value="+229">🇧🇯 +229</option>
+                           <option value="+975">🇧🇹 +975</option>
+                           <option value="+591">🇧🇴 +591</option>
+                           <option value="+387">🇧🇦 +387</option>
+                           <option value="+267">🇧🇼 +267</option>
+                           <option value="+55">🇧🇷 +55</option>
+                           <option value="+673">🇧🇳 +673</option>
+                           <option value="+359">🇧🇬 +359</option>
+                           <option value="+226">🇧🇫 +226</option>
+                           <option value="+95">🇲🇲 +95</option>
+                           <option value="+257">🇧🇮 +257</option>
+                           <option value="+855">🇰🇭 +855</option>
+                           <option value="+237">🇨🇲 +237</option>
+                           <option value="+1">🇨🇦 +1</option>
+                           <option value="+238">🇨🇻 +238</option>
+                           <option value="+236">🇨🇫 +236</option>
+                           <option value="+235">🇹🇩 +235</option>
+                           <option value="+56">🇨🇱 +56</option>
+                           <option value="+86">🇨🇳 +86</option>
+                           <option value="+57">🇨🇴 +57</option>
+                           <option value="+269">🇰🇲 +269</option>
+                           <option value="+506">🇨🇷 +506</option>
+                           <option value="+385">🇭🇷 +385</option>
+                           <option value="+53">🇨🇺 +53</option>
+                           <option value="+357">🇨🇾 +357</option>
+                           <option value="+420">🇨🇿 +420</option>
+                           <option value="+45">🇩🇰 +45</option>
+                           <option value="+253">🇩🇯 +253</option>
+                           <option value="+1-767">🇩🇲 +1-767</option>
+                           <option value="+1-809">🇩🇴 +1-809</option>
+                           <option value="+593">🇪🇨 +593</option>
+                           <option value="+20">🇪🇬 +20</option>
+                           <option value="+503">🇸🇻 +503</option>
+                           <option value="+240">🇬🇶 +240</option>
+                           <option value="+291">🇪🇷 +291</option>
+                           <option value="+372">🇪🇪 +372</option>
+                           <option value="+251">🇪🇹 +251</option>
+                           <option value="+679">🇫🇯 +679</option>
+                           <option value="+358">🇫🇮 +358</option>
+                           <option value="+33">🇫🇷 +33</option>
+                           <option value="+995">🇬🇪 +995</option>
+                           <option value="+49">🇩🇪 +49</option>
+                           <option value="+233">🇬🇭 +233</option>
+                           <option value="+30">🇬🇷 +30</option>
+                           <option value="+852">🇭🇰 +852</option>
+                           <option value="+36">🇭🇺 +36</option>
+                           <option value="+91">🇮🇳 +91</option>
+                           <option value="+62">🇮🇩 +62</option>
+                           <option value="+98">🇮🇷 +98</option>
+                           <option value="+964">🇮🇶 +964</option>
+                           <option value="+353">🇮🇪 +353</option>
+                           <option value="+972">🇮🇱 +972</option>
+                           <option value="+39">🇮🇹 +39</option>
+                           <option value="+81">🇯🇵 +81</option>
+                           <option value="+962">🇯🇴 +962</option>
+                           <option value="+7">🇷🇺 +7</option>
+                           <option value="+254">🇰🇪 +254</option>
+                           <option value="+965">🇰🇼 +965</option>
+                           <option value="+996">🇰🇬 +996</option>
+                           <option value="+856">🇱🇦 +856</option>
+                           <option value="+371">🇱🇻 +371</option>
+                           <option value="+961">🇱🇧 +961</option>
+                           <option value="+218">🇱🇾 +218</option>
+                           <option value="+370">🇱🇹 +370</option>
+                           <option value="+352">🇱🇺 +352</option>
+                           <option value="+853">🇲🇴 +853</option>
+                           <option value="+389">🇲🇰 +389</option>
+                           <option value="+261">🇲🇬 +261</option>
+                           <option value="+60">🇲🇾 +60</option>
+                           <option value="+960">🇲🇻 +960</option>
+                           <option value="+223">🇲🇱 +223</option>
+                           <option value="+356">🇲🇹 +356</option>
+                           <option value="+230">🇲🇺 +230</option>
+                           <option value="+52">🇲🇽 +52</option>
+                           <option value="+373">🇲🇩 +373</option>
+                           <option value="+976">🇲🇳 +976</option>
+                           <option value="+212">🇲🇦 +212</option>
+                           <option value="+95">🇲🇲 +95</option>
+                           <option value="+977">🇳🇵 +977</option>
+                           <option value="+31">🇳🇱 +31</option>
+                           <option value="+64">🇳🇿 +64</option>
+                           <option value="+234">🇳🇬 +234</option>
+                           <option value="+47">🇳🇴 +47</option>
+                           <option value="+968">🇴🇲 +968</option>
+                           <option value="+507">🇵🇦 +507</option>
+                           <option value="+51">🇵🇪 +51</option>
+                           <option value="+63">🇵🇭 +63</option>
+                           <option value="+48">🇵🇱 +48</option>
+                           <option value="+351">🇵🇹 +351</option>
+                           <option value="+974">🇶🇦 +974</option>
+                           <option value="+40">🇷🇴 +40</option>
+                           <option value="+966">🇸🇦 +966</option>
+                           <option value="+65">🇸🇬 +65</option>
+                           <option value="+421">🇸🇰 +421</option>
+                           <option value="+386">🇸🇮 +386</option>
+                           <option value="+27">🇿🇦 +27</option>
+                           <option value="+82">🇰🇷 +82</option>
+                           <option value="+34">🇪🇸 +34</option>
+                           <option value="+94">🇱🇰 +94</option>
+                           <option value="+46">🇸🇪 +46</option>
+                           <option value="+41">🇨🇭 +41</option>
+                           <option value="+886">🇹🇼 +886</option>
+                           <option value="+66">🇹🇭 +66</option>
+                           <option value="+90">🇹🇷 +90</option>
+                           <option value="+44">🇬🇧 +44</option>
+                           <option value="+380">🇺🇦 +380</option>
+                           <option value="+598">🇺🇾 +598</option>
+                           <option value="+998">🇺🇿 +998</option>
+                           <option value="+58">🇻🇪 +58</option>
+                           <option value="+84">🇻🇳 +84</option>
+                           <option value="+967">🇾🇪 +967</option>
+                           <option value="+260">🇿🇲 +260</option>
+                           <option value="+263">🇿🇼 +263</option>
+                        </select>
+                        <input type="text" name="PHONE" id="PHONE" placeholder="Phone/Mobile" required
+                           pattern="[0-9]{6,14}">
+                     </div>
+                              <input autocomplete="off" id="DOMAIN" name="DOMAIN" maxlength="200" type="hidden"
+                                 value="https://www.godrej-plot.in/panipat-plots/in">
+
+                              <div class="col-lg-12 form-group">
+                                 <div class="advanced-button">
+                                    <button class="header_phone theme_button" id="SubmitQuerytop" type="submit">GET
+                                       CALL BACK</button>
+                                    <input autocomplete="off" id="PROJECT" name="PROJECT" maxlength="200" type="hidden"
+                                       value="Godrej Evora Estate ">
+                                    <input autocomplete=" off" id="LOCATION" name="LOCATION" maxlength="200"
+                                       type="hidden" value="Panipat-  International ">
+                                    <input autocomplete="off" id="TEAM" name="TEAM" maxlength="200" type="hidden"
+                                       value="umikoindia">
+                                    <div class="form-group b-user-message">
+                                       <label class="control-label" for="USER_MESSAGE">&nbsp;</label>
+                                       <input id="USER_MESSAGE" type="text" name="USER_MESSAGE" tabindex="-1" value=""
+                                          autocomplete="off" />
+
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="form-response"></div>
+                           </div>
+                        </form>
+
+                     </div>
+                  </div>
+               </div>
+               <div class="footer_b mt-5">
+                  <div class="col-sm-12 text-center box">
+                     <p style="color: #000;" class="col-lg-11 information-web"><b> Disclaimer:</b>The content is for
+                        information purposes
+                        only and does not constitute an offer to avail of any service. Prices mentioned are subject to
+                        change without notice and properties mentioned are subject to availability. Images for
+                        representation purposes only. This website is belong to authorized marketing partner.
+                     </p>
+
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="footer-bootom">
+         <ul class="footermenu">
+            <li>
+               <p style="text-align: center;"><strong><a href="disclaimer.html" target="_blank"><span
+                           style="color: #000000;">Privacy Policy</span></a>&nbsp;|&nbsp;<a href="disclaimer.html"
+                        target="_blank"><span style="color: #000000;"></span></a> Digital Media Planned
+                     by <a href="http://www.umikoweb.com/" target="_blank">Umiko Web</a> </strong> </p>
+            </li>
+         </ul>
+      </div>
+   </footer>
+   <!-- ===============footer section start========================== -->
+
+   <script src=" https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js "></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"
+      integrity="sha512-WNZwVebQjhSxEzwbettGuQgWxbpYdoLf7mH+25A7sfQbbxKeS5SQ9QBf97zOY4nOlwtksgDA/czSTmfj4DUEiQ=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"></script>
+
+   <!-- <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script> -->
+   <script src="js/main.js"></script>
+
+   <script src="js/custom.js"></script>
+   <script>
+      function proprtyForm(titlehoem) {
+         $('#prog550688').val(titlehoem);
+         $('#enquireModalLabel').text(titlehoem);
+         $('#enquireModal').modal('show');
+      }
+
+
+      $(document).ready(function () {
+         setTimeout(() => {
+            $('#newlaunchModal').modal('show')
+         }, 1000);
+      })
+
+
+
+      $(document).ready(function () {
+
+
+         // Amenities Slider
+         $("#amenitiesSlider").owlCarousel({
+            loop: true,
+            margin: 20,
+            nav: true,
+            dots: true,
+            autoplay: true,
+            autoplayTimeout: 3200,
+            autoplayHoverPause: true,
+            smartSpeed: 600,
+            responsive: {
+               0: { items: 1 },
+               576: { items: 1 },
+               768: { items: 3 },
+               1200: { items: 3 }
+            }
+         });
+
+         // Gallery Slider
+         $("#gallerySlider").owlCarousel({
+            loop: true,
+            margin: 15,
+            nav: true,
+            dots: false,
+            autoplay: true,
+            autoplayTimeout: 3000,
+            autoplayHoverPause: true,
+            rtl: false,
+            smartSpeed: 600,
+            responsive: {
+               0: { items: 1 },
+               768: { items: 2 },
+               992: { items: 3 }
+            }
+         });
+
+
+      });
+   </script>
+
+
+</body>
+
+</html>
