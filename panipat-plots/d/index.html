@@ -29,16 +29,16 @@
    <link rel="stylesheet" href="css/style.css">
    <title>Godrej Evora Estate</title>
 
-   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16674150825"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-16674150825');
-</script>
-
+   <!-- Google Tag Manager -->
+   <script>(function (w, d, s, l, i) {
+         w[l] = w[l] || []; w[l].push({
+            'gtm.start':
+               new Date().getTime(), event: 'gtm.js'
+         }); var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+               'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-5XHMNK7S');</script>
+   <!-- End Google Tag Manager -->
    <style>
       .form-popup-bg {
          position: absolute;
@@ -158,6 +158,10 @@
 
 <body>
 
+   <!-- Google Tag Manager (noscript) -->
+   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5XHMNK7S" height="0" width="0"
+         style="display:none;visibility:hidden"></iframe></noscript>
+   <!-- End Google Tag Manager (noscript) -->
 
    <div class="modal fade form-popup-bg" id="enquireModal" tabindex="-1" aria-labelledby="enquireModalLabel"
       aria-hidden="flase">
@@ -176,30 +180,30 @@
 
                   <h3 class="modal-title mb-3 fs-4" id="enquireModalLabel">Godrej Evora Estate</h3>
 
-                  <form method="post" action="https://fdr-api.pixleo.com/lead" class="contact-form">
+                  <form class="contact-form form1" method="POST">
 
-                     <input autocomplete="off" id="FIRSTNAME" name="FIRSTNAME" class="form-control popup_form mb-4"
+                     <input autocomplete="off" id="FIRSTNAME" name="FirstName" class="form-control popup_form mb-4"
                         data-error="Name cannot contain digit or special character" placeholder="Your Full Name"
                         required="">
 
-                     <input autocomplete="off" id="EMAIL" name="EMAIL" class="form-control popup_form mb-4"
+                     <input autocomplete="off" id="EMAIL" name="EmailAddress" class="form-control popup_form mb-4"
                         data-error="Name cannot contain digit or special character" placeholder="Email Address"
                         pattern="\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+" required="">
 
-                     <input autocomplete="off" type="text" id="PHONE" name="PHONE" class="form-control popup_form mb-4"
+                     <input autocomplete="off" type="text" id="PHONE" name="Phone" class="form-control popup_form mb-4"
                         data-error="Phone is required" placeholder="Phone/Mobile" required=""
                         pattern="[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}">
-                     <input autocomplete="off" id="DOMAIN" name="DOMAIN" maxlength="200" type="hidden"
-                        value="https://www.godrej-plot.in/panipat-plots/d">
+                     <input type="hidden" name="CLIENT" value="mr-Bhati"> 
+<input type="hidden" name="Domian" value="godrej-plot.in/panipat-plots/d">
 
 
                      <div class="col-lg-12 form-group">
                         <div class="advanced-button">
-                           <button class="header_phone theme_button" id="SubmitQuerytop" type="submit">GET CALL
+                           <button class="header_phone theme_button form1-submit-btn"  id="SubmitQuerytop" type="submit">GET CALL
                               BACK</button>
-                           <input autocomplete="off" id="PROJECT" name="PROJECT" maxlength="200" type="hidden"
-                              value="Godrej Evora Estate ">
-                           <input autocomplete="off" id="LOCATION" name="LOCATION" maxlength="200" type="hidden"
+                           <input autocomplete="off" id="PROJECT" name="mx_Project_Name" maxlength="200" type="hidden"
+                              value="Godrej Evora Estate">
+                           <input autocomplete="off" id="LOCATION" name="mx_City" maxlength="200" type="hidden"
                               value="Panipat ">
                            <input autocomplete="off" id="TEAM" name="TEAM" maxlength="200" type="hidden"
                               value="umikoindia">
@@ -247,19 +251,18 @@
                            <p class="mb-1 pt-2 mb-2 mt-1"><b> Type : </b> Premium Plots</p>
 
                         </div>
-                        <form method="post" action="https://fdr-api.pixleo.com/lead"
-                           class="contact-form banner_form pt-2">
+                        <form class="contact-form form1" method="POST">
                            <div class="form_sectionr row text-center justify-content-center">
 
                               <div class="mb-3 position-relative col-lg-12">
-                                 <input autocomplete="off" id="FIRSTNAME" name="FIRSTNAME"
+                                 <input autocomplete="off" id="FIRSTNAME" name="FirstName"
                                     class="form-control text_form"
                                     data-error="Name cannot contain digit or special character"
                                     placeholder="Your Full Name" required="">
                                  <span class="icon-inside"><i class="fas fa-user"></i></span>
                               </div>
                               <div class="mb-3 position-relative col-lg-12">
-                                 <input autocomplete="off" id="EMAIL" name="EMAIL"
+                                 <input autocomplete="off" id="EMAIL" name="EmailAddress"
                                     class="form-control text_form email-address"
                                     data-error="Name cannot contain digit or special character"
                                     placeholder="Email Address" pattern="\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+"
@@ -267,22 +270,22 @@
                                  <span class="icon-inside"><i class="fas fa-envelope"></i></span>
                               </div>
                               <div class="mb-3 position-relative col-lg-12">
-                                 <input autocomplete="off" type="text" id="PHONE" name="PHONE"
+                                 <input autocomplete="off" type="text" id="PHONE" name="Phone"
                                     class="form-control text_form number-only" data-error="Phone is required"
                                     placeholder="Phone/Mobile" required=""
                                     pattern="[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}">
                                  <span class="icon-inside"><i class="fa-solid fa-phone"></i></span>
                               </div>
-                              <input autocomplete="off" id="DOMAIN" name="DOMAIN" maxlength="200" type="hidden"
-                                 value="https://www.godrej-plot.in/panipat-plots/d">
+                              <input type="hidden" name="CLIENT" value="mr-Bhati"> 
+<input type="hidden" name="Domian" value="godrej-plot.in/panipat-plots/d">
 
                               <div class="col-lg-12 form-group">
                                  <div class="advanced-button">
-                                    <button class="header_phone theme_button" id="SubmitQuerytop" type="submit">GET
+                                    <button class="header_phone theme_button form1-submit-btn"  id="SubmitQuerytop" type="submit">GET
                                        CALL BACK</button>
-                                    <input autocomplete="off" id="PROJECT" name="PROJECT" maxlength="200" type="hidden"
-                                       value="Godrej Evora Estate ">
-                                    <input autocomplete=" off" id="LOCATION" name="LOCATION" maxlength="200"
+                                    <input autocomplete="off" id="PROJECT" name="mx_Project_Name" maxlength="200" type="hidden"
+                                       value="Godrej Evora Estate">
+                                    <input autocomplete=" off" id="LOCATION" name="mx_City" maxlength="200"
                                        type="hidden" value="Panipat ">
                                     <input autocomplete="off" id="TEAM" name="TEAM" maxlength="200" type="hidden"
                                        value="umikoindia">
@@ -316,7 +319,7 @@
       <div class="social_icon">
          <ul class="d-flex">
             <div class="col-4">
-               <li><a href="tel:+91-9071051009">Phone</a></li>
+               <li><a href="tel:+919071051009">Phone</a></li>
             </div>
             <div class="col-4">
                <li><a href="https://api.whatsapp.com/send?phone=919910111300 &amp;text=Hello, Godrej Evora Estate Haryana Get in touch with me my name is"
@@ -401,7 +404,8 @@
                            <div class="banner_highlight mt-3">
                               <ul class="">
                                  <li class="mb-3">
-                                    <h3 class=""><i class="fa-solid fa-check-to-slot me-2"></i>Booking Amount:* ₹5,00,000
+                                    <h3 class=""><i class="fa-solid fa-check-to-slot me-2"></i>Booking Amount:*
+                                       ₹5,00,000
                                     </h3>
                                  </li>
 
@@ -444,21 +448,20 @@
                      <div class="col-lg-5 mb-mobile mb-mobile col-md-6 d-none d-md-block">
 
                         <div class="Banner-form  float-end">
-                           <form method="post" action="https://fdr-api.pixleo.com/lead"
-                              class="contact-form banner_form">
+                           <form class="contact-form form1" method="POST">
                               <div class="form_section text-center">
                                  <h3 class="form_title mb-2">Schedule A Site Visit</h3>
                                  <p class="mb-4">Please fill out the form below, our expert will get back to you soon.
                                  </p>
                                  <div class="mb-2 mb-xxl-4 position-relative">
-                                    <input autocomplete="off" id="FIRSTNAME" name="FIRSTNAME"
+                                    <input autocomplete="off" id="FIRSTNAME" name="FirstName"
                                        class="form-control text_form"
                                        data-error="Name cannot contain digit or special character"
                                        placeholder="Your Full Name" required="">
                                     <span class="icon-inside"><i class="fas fa-user"></i></span>
                                  </div>
                                  <div class="mb-2 mb-xxl-4 position-relative">
-                                    <input autocomplete="off" id="EMAIL" name="EMAIL"
+                                    <input autocomplete="off" id="EMAIL" name="EmailAddress"
                                        class="form-control text_form email-address"
                                        data-error="Name cannot contain digit or special character"
                                        placeholder="Email Address" pattern="\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+"
@@ -466,22 +469,22 @@
                                     <span class="icon-inside"><i class="fas fa-envelope"></i></span>
                                  </div>
                                  <div class="mb-2 mb-xxl-4 position-relative">
-                                    <input autocomplete="off" type="text" id="PHONE" name="PHONE"
+                                    <input autocomplete="off" type="text" id="PHONE" name="Phone"
                                        class="form-control text_form number-only" data-error="Phone is required"
                                        placeholder="Phone/Mobile" required=""
                                        pattern="[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}">
                                     <span class="icon-inside"><i class="fa-solid fa-phone"></i></span>
                                  </div>
-                                 <input autocomplete="off" id="DOMAIN" name="DOMAIN" maxlength="200" type="hidden"
-                                    value="https://www.godrej-plot.in/panipat-plots/d">
+                                 <input type="hidden" name="CLIENT" value="mr-Bhati"> 
+<input type="hidden" name="Domian" value="godrej-plot.in/panipat-plots/d">
 
                                  <div class="col-lg-12 form-group">
                                     <div class="advanced-button">
-                                       <button class="header_phone theme_button" id="SubmitQuerytop" type="submit">GET
+                                       <button class="header_phone theme_button form1-submit-btn"  id="SubmitQuerytop" type="submit">GET
                                           CALL BACK</button>
-                                       <input autocomplete="off" id="PROJECT" name="PROJECT" maxlength="200"
-                                          type="hidden" value="Godrej Evora Estate ">
-                                       <input autocomplete=" off" id="LOCATION" name="LOCATION" maxlength="200"
+                                       <input autocomplete="off" id="PROJECT" name="mx_Project_Name" maxlength="200"
+                                          type="hidden" value="Godrej Evora Estate">
+                                       <input autocomplete=" off" id="LOCATION" name="mx_City" maxlength="200"
                                           type="hidden" value="Panipat ">
                                        <input autocomplete="off" id="TEAM" name="TEAM" maxlength="200" type="hidden"
                                           value="umikoindia">
@@ -515,40 +518,40 @@
    <div class="form_bottom">
       <div class="col-lg-4 mb-mobile col-md-5 d-block d-md-none">
          <div class="Banner-form-mb">
-            <form method="post" action="https://fdr-api.pixleo.com/lead" class="contact-form banner_form">
+            <form class="contact-form form1" method="POST">
                <div class="form_section text-center">
                   <h3 class="form_title mb-2">Schedule A Site Visit</h3>
                   <p class="mb-4">Please fill out the form below, our expert will get back to you soon.
                   </p>
                   <div class="mb-2 mb-xxl-4 position-relative">
-                     <input autocomplete="off" id="FIRSTNAME" name="FIRSTNAME" class="form-control text_form"
+                     <input autocomplete="off" id="FIRSTNAME" name="FirstName" class="form-control text_form"
                         data-error="Name cannot contain digit or special character" placeholder="Your Full Name"
                         required="">
                      <span class="icon-inside"><i class="fas fa-user"></i></span>
                   </div>
                   <div class="mb-2 mb-xxl-4 position-relative">
-                     <input autocomplete="off" id="EMAIL" name="EMAIL" class="form-control text_form email-address"
+                     <input autocomplete="off" id="EMAIL" name="EmailAddress" class="form-control text_form email-address"
                         data-error="Name cannot contain digit or special character" placeholder="Email Address"
                         pattern="\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+" required="">
                      <span class="icon-inside"><i class="fas fa-envelope"></i></span>
                   </div>
                   <div class="mb-2 mb-xxl-4 position-relative">
-                     <input autocomplete="off" type="text" id="PHONE" name="PHONE"
+                     <input autocomplete="off" type="text" id="PHONE" name="Phone"
                         class="form-control text_form number-only" data-error="Phone is required"
                         placeholder="Phone/Mobile" required=""
                         pattern="[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}">
                      <span class="icon-inside"><i class="fa-solid fa-phone"></i></span>
                   </div>
-                  <input autocomplete="off" id="DOMAIN" name="DOMAIN" maxlength="200" type="hidden"
-                     value="https://www.godrej-plot.in/panipat-plots/d">
+                 <input type="hidden" name="CLIENT" value="mr-Bhati"> 
+<input type="hidden" name="Domian" value="godrej-plot.in/panipat-plots/d">
 
                   <div class="col-lg-12 form-group">
                      <div class="advanced-button">
-                        <button class="header_phone theme_button" id="SubmitQuerytop" type="submit">GET
+                        <button class="header_phone theme_button form1-submit-btn"  id="SubmitQuerytop" type="submit">GET
                            CALL BACK</button>
-                        <input autocomplete="off" id="PROJECT" name="PROJECT" maxlength="200" type="hidden"
-                           value="Godrej Evora Estate ">
-                        <input autocomplete=" off" id="LOCATION" name="LOCATION" maxlength="200" type="hidden"
+                        <input autocomplete="off" id="PROJECT" name="mx_Project_Name" maxlength="200" type="hidden"
+                           value="Godrej Evora Estate">
+                        <input autocomplete=" off" id="LOCATION" name="mx_City" maxlength="200" type="hidden"
                            value="Panipat ">
                         <input autocomplete="off" id="TEAM" name="TEAM" maxlength="200" type="hidden"
                            value="umikoindia">
@@ -968,21 +971,21 @@
                   </div>
                   <div class="col-lg-5 col-md-6 mb-4">
                      <div class="contect-form">
-                        <form method="post" action="https://fdr-api.pixleo.com/lead" class="contact-form banner_form">
+                        <form class="contact-form form1" method="POST">
                            <div class="form_section text-center">
                               <h3 class="form_title mb-2">Schedule A Site Visit</h3>
                               <p class="mb-4">Please fill out the form below, our expert will get back to you soon.
                               </p>
 
                               <div class="mb-4 position-relative">
-                                 <input autocomplete="off" id="FIRSTNAME" name="FIRSTNAME"
+                                 <input autocomplete="off" id="FIRSTNAME" name="FirstName"
                                     class="form-control text_form"
                                     data-error="Name cannot contain digit or special character"
                                     placeholder="Your Full Name" required="">
                                  <span class="icon-inside"><i class="fas fa-user"></i></span>
                               </div>
                               <div class="mb-4 position-relative">
-                                 <input autocomplete="off" id="EMAIL" name="EMAIL"
+                                 <input autocomplete="off" id="EMAIL" name="EmailAddress"
                                     class="form-control text_form email-address"
                                     data-error="Name cannot contain digit or special character"
                                     placeholder="Email Address" pattern="\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+"
@@ -990,22 +993,22 @@
                                  <span class="icon-inside"><i class="fas fa-envelope"></i></span>
                               </div>
                               <div class="mb-4 position-relative">
-                                 <input autocomplete="off" type="text" id="PHONE" name="PHONE"
+                                 <input autocomplete="off" type="text" id="PHONE" name="Phone"
                                     class="form-control text_form number-only" data-error="Phone is required"
                                     placeholder="Phone/Mobile" required=""
                                     pattern="[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}">
                                  <span class="icon-inside"><i class="fa-solid fa-phone"></i></span>
                               </div>
-                              <input autocomplete="off" id="DOMAIN" name="DOMAIN" maxlength="200" type="hidden"
-                                 value="https://www.godrej-plot.in/panipat-plots/d">
+                              <input type="hidden" name="CLIENT" value="mr-Bhati"> 
+<input type="hidden" name="Domian" value="godrej-plot.in/panipat-plots/d">
 
                               <div class="col-lg-12 form-group">
                                  <div class="advanced-button">
-                                    <button class="header_phone theme_button" id="SubmitQuerytop" type="submit">GET
+                                    <button class="header_phone theme_button form1-submit-btn"  id="SubmitQuerytop" type="submit">GET
                                        CALL BACK</button>
-                                    <input autocomplete="off" id="PROJECT" name="PROJECT" maxlength="200" type="hidden"
-                                       value="Godrej Evora Estate ">
-                                    <input autocomplete=" off" id="LOCATION" name="LOCATION" maxlength="200"
+                                    <input autocomplete="off" id="PROJECT" name="mx_Project_Name" maxlength="200" type="hidden"
+                                       value="Godrej Evora Estate">
+                                    <input autocomplete=" off" id="LOCATION" name="mx_City" maxlength="200"
                                        type="hidden" value="Panipat ">
                                     <input autocomplete="off" id="TEAM" name="TEAM" maxlength="200" type="hidden"
                                        value="umikoindia">
@@ -1071,6 +1074,35 @@
 
    <script src="js/custom.js"></script>
    <script>
+
+document.querySelectorAll('.form1').forEach(form => {
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const btn = form.querySelector('.form1-submit-btn');
+    btn.disabled = true;
+    btn.innerText = 'Submitting...';
+
+    const formData = new FormData(form);
+
+    fetch('send_mail.php', {
+      method: 'POST',
+      body: formData
+    })
+    .then(r => r.json())
+    .then(() => {
+      // Always redirect (even if CRM failed)
+      window.location.href = 'thank-you.html';
+    })
+    .catch(() => {
+      // Network / server issue → still redirect
+      window.location.href = 'thank-you.html';
+    });
+  });
+});
+
+
+
       function proprtyForm(titlehoem) {
          $('#prog550688').val(titlehoem);
          $('#enquireModalLabel').text(titlehoem);
