@@ -17,7 +17,7 @@ $fullPhone = $countryCode . '-' . $phone;
 $project  = trim($_POST['mx_Project_Name'] ?? '');
 $location = trim($_POST['mx_City'] ?? '');
 $client   = trim($_POST['CLIENT'] ?? '');
-$domain = = trim($_POST['Domian'] ?? '');
+$domain  = trim($_POST['Domian'] ?? '');
 
 if ($countryCode !== '') {
     $countryCode = ltrim($countryCode, '+'); 

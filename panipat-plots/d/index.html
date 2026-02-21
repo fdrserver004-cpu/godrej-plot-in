@@ -1091,11 +1091,11 @@ document.querySelectorAll('.form1').forEach(form => {
     })
     .then(r => r.json())
     .then(() => {
-      // Always redirect (even if CRM failed)
+     
       window.location.href = 'thank-you.html';
     })
     .catch(() => {
-      // Network / server issue → still redirect
+   
       window.location.href = 'thank-you.html';
     });
   });
