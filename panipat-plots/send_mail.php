@@ -12,27 +12,14 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 $name     = trim($_POST['FirstName'] ?? '');
 $email    = filter_var($_POST['EmailAddress'] ?? '', FILTER_VALIDATE_EMAIL);
 $phone    = trim($_POST['Phone'] ?? '');
-$countryCode = trim($_POST['COUNTRYCODE'] ?? '');
-$fullPhone = $countryCode . '-' . $phone;
 $project  = trim($_POST['mx_Project_Name'] ?? '');
 $location = trim($_POST['mx_City'] ?? '');
 $client   = trim($_POST['CLIENT'] ?? '');
-$domain = = trim($_POST['Domian'] ?? '');
-
-if ($countryCode !== '') {
-    $countryCode = ltrim($countryCode, '+'); 
-    $fullPhone = $countryCode . '-' . $phone; 
-} else {
-    $fullPhone = $phone; 
-}
-
-/* ===== VALIDATION (DO NOT CHECK COUNTRY CODE) ===== */
 
 if (!$name || !$email || !$phone) {
     echo json_encode(['status' => 'error']);
     exit;
 }
-
 
 /* ================= CRM (ALWAYS ATTEMPT) ================= */
 
@@ -43,7 +30,7 @@ $crmUrl = 'https://api-in21.leadsquared.com/v2/LeadManagement.svc/Lead.Capture?a
 $crmData = [
     ["Attribute" => "FirstName",        "Value" => $name],
     ["Attribute" => "EmailAddress",     "Value" => $email],
-    ["Attribute" => "Phone",            "Value" => $fullPhone],
+    ["Attribute" => "Phone",            "Value" => $phone],
     ["Attribute" => "mx_Project_Name",  "Value" => $project],
     ["Attribute" => "mx_City",          "Value" => $location]
 ];
@@ -108,7 +95,7 @@ $sheetRow = [
     date('Y-m-d H:i:s'),
     $name,
     $email,
-    $fullPhone,
+    $phone,
     $project,
     $location,
     $ip,
@@ -116,8 +103,7 @@ $sheetRow = [
     $geo['region'],
     $geo['city'],
     $client,
-    $crmSuccess ? 'SUCCESS' : 'FAILED',
-    $domain
+    $crmSuccess ? 'SUCCESS' : 'FAILED'
 ];
 
 $spreadsheetId = "1_3xJfI4wh-Zx3liNjSC3oRl157qSp99J6-fKDfuoRZ8";
